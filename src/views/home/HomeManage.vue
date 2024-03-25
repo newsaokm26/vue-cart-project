@@ -1,3 +1,12 @@
+<script setup>
+import HomeBanner from './components/HomeBanner.vue'
+import HomeProduct from './components/HomeProduct.vue'
+import HomeNew from './components/HomeNew.vue'
+</script>
+
 <template>
-  <div>我是Home頁</div>
+  <HomeBanner />
+  <HomeProduct />
+  <HomeNew />
+  <app-gotop></app-gotop>
 </template>

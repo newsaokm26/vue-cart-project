@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
+// createWebHistory createWebHashHistory
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    { path: '/login', component: () => import('@/views/login/LoginPage.vue') },
     {
       path: '/',
       component: () => import('@/views/layout/LayoutContainer.vue'),
@@ -14,8 +14,20 @@ const router = createRouter({
           component: () => import('@/views/home/HomeManage.vue')
         },
         {
-          path: '/category/manage',
+          path: '/login',
+          component: () => import('@/views/login/LoginPage.vue')
+        },
+        {
+          path: '/category/manage/:id',
           component: () => import('@/views/category/CategoryManage.vue')
+        },
+        {
+          path: '/detail/manage/:id',
+          component: () => import('@/views/detail/DetailManage.vue')
+        },
+        {
+          path: '/cartlist/manage',
+          component: () => import('@/views/cartlist/CartListManage.vue')
         }
       ]
     }

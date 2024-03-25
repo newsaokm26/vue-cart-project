@@ -9,3 +9,4 @@ export default pinia
 // import { useUserStore } from './moudles/user'
 // export { useUserStore }
 export * from './modules/user'
+export * from './modules/cartStore'
