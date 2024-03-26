@@ -44,16 +44,11 @@ onMounted(() => {
           </div>
         </div>
         <div class="foot">
-          <!-- <el-button
+          <el-button
             size="large"
             type="primary"
             @click="$router.push('/cartList/manage')"
             >去購物車結算</el-button
-          > -->
-          <el-button size="large" type="primary"
-            ><RouterLink :to="`/cartList/manage`"
-              >去購物車結算</RouterLink
-            ></el-button
           >
         </div>
       </template>
