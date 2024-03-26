@@ -9,7 +9,7 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/vue-cart-project',
+  base: '/vue-cart-project/',
   plugins: [
     vue(),
     AutoImport({
