@@ -27,17 +27,12 @@ const router = createRouter({
         },
         {
           path: '/cartlist/manage',
+          name: 'cartlist',
           component: () => import('@/views/cartlist/CartListManage.vue')
         }
       ]
     }
   ]
-})
-
-router.onError((error, to) => {
-  if (error.message.includes('Failed to fetch dynamically imported module')) {
-    window.location = to.href
-  }
 })
 
 export default router

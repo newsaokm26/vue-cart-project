@@ -47,7 +47,7 @@ onMounted(() => {
           <el-button
             size="large"
             type="primary"
-            @click="$router.push('/cartList/manage')"
+            @click="$router.push({ name: 'cartlist' })"
             >去購物車結算</el-button
           >
         </div>
