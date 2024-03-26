@@ -1,1 +1,1 @@
-<template>404錯誤頁面 !</template>
+<template>404錯誤頁面</template>
