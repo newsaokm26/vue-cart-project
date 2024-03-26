@@ -47,3 +47,6 @@ pnpm lint
 * 前端框架: Vue3
 * 狀態管理: pinia
 * 組件庫: element-plus
+
+### 演示畫面
+影片: https://share.vidyard.com/watch/7s6WvPhd4VAUt9Uvo5G3su?
