@@ -21,3 +21,8 @@ app.use(router)
 app.use(vuetify)
 app.use(componentPlugin)
 app.mount('#app')
+
+// 每次換頁 回到頂部
+router.afterEach(() => {
+  window.scrollTo(0, 0)
+})
