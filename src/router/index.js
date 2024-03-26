@@ -15,7 +15,7 @@ const router = createRouter({
         },
         {
           path: '/login',
-          component: () => import('@/views/login/LoginPage.vue')
+          component: () => import('../views/login/LoginPage.vue')
         },
         {
           path: '/category/manage/:id',
@@ -27,7 +27,7 @@ const router = createRouter({
         },
         {
           path: '/cartlist/manage',
-          component: () => import('@/views/cartlist/CartListManage.vue')
+          component: () => import('../views/cartlist/CartListManage.vue')
         }
       ]
     }
