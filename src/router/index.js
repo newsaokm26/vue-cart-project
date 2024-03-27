@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-
+import CartListManage from '../views/cartlist/CartListManage.vue'
+import LoginPage from '../views/login/LoginPage.vue'
 // createWebHistory createWebHashHistory
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -15,7 +16,7 @@ const router = createRouter({
         },
         {
           path: '/login',
-          component: () => import('../views/login/LoginPage.vue')
+          component: LoginPage
         },
         {
           path: '/category/manage/:id',
@@ -27,7 +28,7 @@ const router = createRouter({
         },
         {
           path: '/cartlist/manage',
-          component: () => import('../views/cartlist/CartListManage.vue')
+          component: CartListManage
         }
       ]
     }

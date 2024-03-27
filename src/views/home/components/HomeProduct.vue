@@ -14,7 +14,7 @@ onMounted(() => {
 })
 </script>
 <template>
-  <HomePanel title="- 新品上市 -">
+  <HomePanel title="- 寶可夢 -">
     <template #main>
       <ul class="goods-list">
         <li v-for="item in pokeData" :key="item.id">
