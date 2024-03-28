@@ -142,9 +142,7 @@ const addCart = () => {
 
               <!-- 運送方式 -->
               <h5>| 運送方式</h5>
-              <img
-                src="D:\CodePractise\vue Project\vue3-funtoplay\src\assets\buyknow.png"
-              />
+              <img src="@/assets/buyknow.png" />
             </div>
           </div>
         </div>
