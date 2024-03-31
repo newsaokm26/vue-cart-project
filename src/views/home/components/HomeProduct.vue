@@ -7,6 +7,7 @@ const pokeData = ref([])
 const getPokeData = async () => {
   const res = await homeGetPokeApi()
   pokeData.value = res.data.data
+  console.log(pokeData.value)
 }
 
 onMounted(() => {
@@ -40,7 +41,7 @@ onMounted(() => {
       </ul>
     </template>
     <template #more>
-      <app-more path="/"></app-more>
+      <app-more path="/category/manage/100100"></app-more>
     </template>
   </HomePanel>
 </template>
