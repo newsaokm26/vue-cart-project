@@ -47,9 +47,14 @@ pnpm lint
 * 前端框架: Vue3
 * 狀態管理: pinia
 * 組件庫: element-plus
+* Api接口: Apifox
 
 ### 演示畫面
-影片: https://share.vidyard.com/watch/7s6WvPhd4VAUt9Uvo5G3su?
+影片: [操作畫面](https://share.vidyard.com/watch/7s6WvPhd4VAUt9Uvo5G3su?)
+
+網站: [網站入口](https://newsaokm26.github.io/vue-cart-project/)
+
+
 
 
 
