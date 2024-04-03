@@ -1,11 +1,19 @@
 <script setup>
 import { Search, ShoppingCart } from '@element-plus/icons-vue'
+import { ref } from 'vue'
+import GoodsDialog from './GoodsDialog.vue'
 defineProps({
   goods: {
     tpye: Object,
     default: () => {}
   }
 })
+
+// 彈窗組件
+const dialogRef = ref()
+const openDialog = (id) => {
+  dialogRef.value.open(id)
+}
 </script>
 <template>
   <div class="body-item">
@@ -19,10 +27,12 @@ defineProps({
         ><el-icon class="butt search"><Search /></el-icon
       ></RouterLink>
 
-      <RouterLink to="/" class="cover-a"
-        ><el-icon class="butt shopp"><ShoppingCart /></el-icon
-      ></RouterLink>
+      <button class="cover-a" @click="openDialog(goods.id)">
+        <el-icon class="butt shopp"><ShoppingCart /></el-icon>
+      </button>
     </div>
+    <!-- 彈窗組件 -->
+    <GoodsDialog ref="dialogRef"></GoodsDialog>
   </div>
 </template>
 <style scoped lang="scss">
