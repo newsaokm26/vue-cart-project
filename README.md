@@ -33,6 +33,12 @@ pnpm build
 ```sh
 pnpm lint
 ```
+
+### RWD
+codepen: [codepen](https://codepen.io/YA-RR/pen/KKYBXxR)
+
+codepen: [codepen](https://codepen.io/YA-RR/pen/JjVByML)
+
 ---
 
 ### 項目內容
