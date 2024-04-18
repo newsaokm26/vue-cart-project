@@ -44,9 +44,20 @@ const addCart = () => {
     ElMessage.warning('請選擇規格')
   }
 }
+
+const section1Ref = ref(null)
+const section3Ref = ref(null)
+
+const sectionArrRef = ref([])
+const arrpush = () => {
+  sectionArrRef.value.push(section1Ref)
+  sectionArrRef.value.push(section3Ref)
+}
+arrpush()
+console.log(sectionArrRef)
 </script>
 <template>
-  <DetailFixed />
+  <DetailFixed :section1Ref="section1Ref" />
   <div class="xtx-goods-page">
     <div class="bread">
       <div class="bread-container">
@@ -111,7 +122,9 @@ const addCart = () => {
             <div class="goods-tabs">
               <ul>
                 <li>
-                  <a href="#"><div>商品介紹</div></a>
+                  <a href="#"
+                    ><div ref="section1Ref" id="section1">商品介紹</div></a
+                  >
                 </li>
                 <li>
                   <a href="#"><div>商品詳情</div></a>
@@ -136,7 +149,7 @@ const addCart = () => {
               <h3 style="text-align: center">大師級收藏家一定要擁有!</h3>
               <br />
               <!-- \n\n -->
-              <hr />
+              <hr ref="section3Ref" id="section3" />
 
               <!-- 图片 -->
 
@@ -246,6 +259,7 @@ const addCart = () => {
     }
 
     h5 {
+      margin-top: 50px;
       margin-bottom: 8px;
       font-size: 20px;
     }

@@ -2,13 +2,26 @@
 // vueUse
 import { useScroll } from '@vueuse/core'
 const { y } = useScroll(window)
+
+const section1Ref = defineProps({
+  section1Ref: {}
+})
+
+// console.log('談窗', section1Ref)
+
+const scrollToAnchor = (ref) => {
+  if (ref) {
+    console.log('觸發', ref.section1Ref)
+    ref.section1Ref.scrollIntoView({ behavior: 'smooth' })
+  }
+}
 </script>
 <template>
   <div class="det-header-sticky" :class="{ show: y > 800 }">
     <div class="goods-tabs">
       <ul>
         <li>
-          <a href="#"><div>商品介紹</div></a>
+          <a @click="scrollToAnchor(section1Ref)"><div>商品介紹</div></a>
         </li>
         <li>
           <a href="#"><div>商品詳情</div></a>
@@ -49,7 +62,7 @@ const { y } = useScroll(window)
 
   .goods-tabs {
     height: 42px;
-
+    cursor: pointer;
     ul {
       display: flex;
       border: 1px solid #000000;
