@@ -1,17 +1,53 @@
 <script setup>
+// import { homeGetMarioApi } from '@/api/home'
+// import { onMounted } from 'vue'
 import HomePanel from './HomePanel.vue'
-import { homeGetMarioApi } from '@/api/home'
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 
-const marioData = ref([])
-const getMarioData = async () => {
-  const res = await homeGetMarioApi()
-  marioData.value = res.data.data
-}
+// const marioData = ref([])
+// const getMarioData = async () => {
+//   const res = await homeGetMarioApi()
+//   marioData.value = res.data.data
+// }
 
-onMounted(() => {
-  getMarioData()
-})
+// onMounted(() => {
+//   getMarioData()
+// })
+
+const marioData = ref([
+  {
+    id: '1002001000',
+    name: '馬力歐 | 地圖場景',
+    price: '2500',
+    desc: '',
+    picture:
+      'https://images.unsplash.com/photo-1612404730960-5c71577fca11?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+  },
+  {
+    id: '1002001001',
+    name: '馬力歐 | 馬力歐玩偶',
+    price: '350',
+    desc: '',
+    picture:
+      'https://images.unsplash.com/photo-1551103782-8ab07afd45c1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+  },
+  {
+    id: '1002001002',
+    name: '馬力歐 | 馬力歐公仔',
+    price: '250',
+    desc: '',
+    picture:
+      'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+  },
+  {
+    id: '1002001003',
+    name: '馬力歐 | 超級蘑菇',
+    price: '300',
+    desc: '',
+    picture:
+      'https://images.unsplash.com/photo-1634159779963-4fafda643dac?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+  }
+])
 </script>
 <template>
   <HomePanel title="- 超級馬力歐 -">
