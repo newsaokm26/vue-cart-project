@@ -60,6 +60,7 @@ const enterhandler = (i) => {
     img {
       width: 400px;
       height: 400px;
+      object-fit: cover; // 等比例縮放
     }
   }
 

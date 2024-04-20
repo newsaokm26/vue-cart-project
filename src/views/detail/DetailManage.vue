@@ -1,22 +1,25 @@
 <script setup>
+// import { detGetGoodsApi } from '@/api/detail'
+// import { onMounted } from 'vue'
+// import { useRoute } from 'vue-router'
 import DetailFixed from './components/DetailFixed.vue'
-import { detGetGoodsApi } from '@/api/detail'
-import { ref, onMounted } from 'vue'
-import { useRoute } from 'vue-router'
+import { ref } from 'vue'
 import { useCartStore } from '@/stores'
+// 準備資料
+import { useGoodsData } from './components/useGoods'
 
 const cartSotre = useCartStore()
 
-const goods = ref({})
-const route = useRoute()
-const getGoods = async () => {
-  const res = await detGetGoodsApi(route.params.id)
-  goods.value = res.data.result
-}
+// const goods = ref({})
+// const route = useRoute()
+// const getGoods = async () => {
+//   const res = await detGetGoodsApi(route.params.id)
+//   goods.value = res.data.result
+// }
 
-onMounted(() => {
-  getGoods()
-})
+// onMounted(() => {
+//   getGoods()
+// })
 
 // count
 const count = ref(1)
@@ -45,16 +48,12 @@ const addCart = () => {
   }
 }
 
+// 錨點
 const section1Ref = ref(null)
 const section3Ref = ref(null)
 
-const sectionArrRef = ref([])
-const arrpush = () => {
-  sectionArrRef.value.push(section1Ref)
-  sectionArrRef.value.push(section3Ref)
-}
-arrpush()
-console.log(sectionArrRef)
+// 準備資料
+const { goods } = useGoodsData()
 </script>
 <template>
   <DetailFixed :section1Ref="section1Ref" />

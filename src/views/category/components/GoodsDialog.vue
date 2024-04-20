@@ -4,6 +4,9 @@ import { detGetGoodsApi } from '@/api/detail'
 
 // 彈窗打開關閉方法
 const dialogVisible = ref(false)
+
+// count
+const count = ref(1)
 // 商品詳細資料
 const goods = ref({})
 const open = async (id) => {
@@ -38,7 +41,8 @@ defineExpose({
             <div class="nt-price">NT$199</div>
           </div>
           <!-- 組件 -->
-          <el-input-number :min="1" :max="10"> </el-input-number>
+          <el-input-number v-model="count" :min="1" :max="10">
+          </el-input-number>
           <!-- 加入 -->
           <el-button size="large" class="joinbtn" @click="addCart">
             加入購物車

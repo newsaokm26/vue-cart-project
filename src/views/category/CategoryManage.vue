@@ -1,23 +1,28 @@
 <script setup>
-import { cateGetCategoryApi } from '@/api/category'
-import { ref, onMounted } from 'vue'
-import { useRoute, onBeforeRouteUpdate } from 'vue-router'
+// import { cateGetCategoryApi } from '@/api/category'
+// import { ref, onMounted } from 'vue'
+// import { useRoute, onBeforeRouteUpdate } from 'vue-router'
 import GoodsItem from './components/GoodsItem.vue'
 
-const categoryData = ref({})
-const route = useRoute()
-const getCategory = async (id = route.params.id) => {
-  const res = await cateGetCategoryApi(id)
-  categoryData.value = res.data.data
-  console.log(categoryData.value)
-}
+// const categoryData = ref({})
+// const route = useRoute()
+// const getCategory = async (id = route.params.id) => {
+//   const res = await cateGetCategoryApi(id)
+//   categoryData.value = res.data.data
+//   console.log(categoryData.value)
+// }
 
-onMounted(() => getCategory())
+// onMounted(() => getCategory())
 
-// 路由緩存
-onBeforeRouteUpdate((to) => {
-  getCategory(to.params.id)
-})
+// // 路由緩存
+// onBeforeRouteUpdate((to) => {
+//   getCategory(to.params.id)
+// })
+
+// 數據
+import { useCategoryData } from './components/useCategoryData'
+
+const { categoryData } = useCategoryData()
 </script>
 <template>
   <div class="cate-container">
