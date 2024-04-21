@@ -3,16 +3,18 @@
 import { useScroll } from '@vueuse/core'
 const { y } = useScroll(window)
 
-const section1Ref = defineProps({
-  section1Ref: {}
+// 錨點
+defineProps({
+  section1Ref: {},
+  section3Ref: {}
 })
 
 // console.log('談窗', section1Ref)
 
 const scrollToAnchor = (ref) => {
   if (ref) {
-    console.log('觸發', ref.section1Ref)
-    ref.section1Ref.scrollIntoView({ behavior: 'smooth' })
+    console.log('觸發', ref)
+    ref.scrollIntoView({ behavior: 'smooth' })
   }
 }
 </script>
@@ -24,13 +26,13 @@ const scrollToAnchor = (ref) => {
           <a @click="scrollToAnchor(section1Ref)"><div>商品介紹</div></a>
         </li>
         <li>
-          <a href="#"><div>商品詳情</div></a>
+          <a href="javascript:;"><div>商品詳情</div></a>
         </li>
         <li>
-          <a href="#"><div>運送方式</div></a>
+          <a @click="scrollToAnchor(section3Ref)"><div>運送方式</div></a>
         </li>
         <li class="btn">
-          <a href="#"><div>加入購物車</div></a>
+          <a href="javascript:;"><div>加入購物車</div></a>
         </li>
       </ul>
     </div>

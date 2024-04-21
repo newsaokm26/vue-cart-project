@@ -13,6 +13,12 @@ const homeCarousel = [
     name: '寶可夢 | 大頭公仔',
     imgUrl:
       'https://images.unsplash.com/photo-1605979257913-1704eb7b6246?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+  },
+  {
+    id: '1002001000',
+    name: '馬力歐 | 地圖場景',
+    imgUrl:
+      'https://images.unsplash.com/photo-1612404730960-5c71577fca11?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
   }
 ]
 </script>
@@ -35,7 +41,6 @@ const homeCarousel = [
 .home-banner {
   height: 500px;
   margin: 0 auto;
-  margin-top: 1.5px;
 
   img {
     width: 100%;

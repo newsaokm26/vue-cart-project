@@ -14,6 +14,11 @@ const singleCheck = (i, selected) => {
 const allCheck = (selected) => {
   cartStore.allCheck(selected)
 }
+
+// 刪除
+const delCart = (i) => {
+  cartStore.delCart(i.skuId)
+}
 </script>
 
 <template>
@@ -88,7 +93,7 @@ const allCheck = (selected) => {
               <td colspan="6">
                 <div class="cart-none">
                   <el-empty description="購物車列表為空">
-                    <el-button type="primary">隨便逛逛</el-button>
+                    <el-button @click="$router.push('/')">隨便逛逛</el-button>
                   </el-empty>
                 </div>
               </td>
@@ -114,7 +119,6 @@ const allCheck = (selected) => {
 <style scoped lang="scss">
 .xtx-cart-page {
   margin-top: 20px;
-
   .cart {
     background: #fff;
     color: #565656;
@@ -260,6 +264,27 @@ const allCheck = (selected) => {
     font-size: 16px;
     font-weight: normal;
     line-height: 50px;
+  }
+
+  .el-button {
+    width: 200px;
+    background: #4bb9b0;
+    border: #4bb9b0;
+    color: #fff;
+  }
+
+  // 改變組件樣式
+  :deep() .el-checkbox__inner {
+    border-color: $xtxColor;
+  }
+
+  :deep() .el-checkbox__input.is-checked .el-checkbox__inner {
+    background-color: #fff;
+    border-color: $xtxColor;
+
+    &::after {
+      border-color: $xtxColor;
+    }
   }
 }
 </style>

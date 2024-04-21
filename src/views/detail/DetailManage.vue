@@ -56,7 +56,7 @@ const section3Ref = ref(null)
 const { goods } = useGoodsData()
 </script>
 <template>
-  <DetailFixed :section1Ref="section1Ref" />
+  <DetailFixed :section1Ref="section1Ref" :section3Ref="section3Ref" />
   <div class="xtx-goods-page">
     <div class="bread">
       <div class="bread-container">
@@ -121,15 +121,15 @@ const { goods } = useGoodsData()
             <div class="goods-tabs">
               <ul>
                 <li>
-                  <a href="#"
+                  <a href="javascript:;"
                     ><div ref="section1Ref" id="section1">商品介紹</div></a
                   >
                 </li>
                 <li>
-                  <a href="#"><div>商品詳情</div></a>
+                  <a href="javascript:;"><div>商品詳情</div></a>
                 </li>
                 <li>
-                  <a href="#"><div>運送方式</div></a>
+                  <a href="javascript:;"><div>運送方式</div></a>
                 </li>
               </ul>
             </div>
